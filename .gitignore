@@ -1,0 +1,14 @@
+scratch
+.*.timestamp
+*.jou
+*.log
+*.pb
+*.wdb
+*.str
+xsim.dir
+.Xil
+.gen
+.srcs
+*.dcp
+build
+reports
