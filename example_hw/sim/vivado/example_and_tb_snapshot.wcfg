@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="example_and_tb_snapshot.wdb" id="1">
+         <top_modules>
+            <top_module name="example_and_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="299.742 ns"></ZoomStartTime>
+      <ZoomEndTime time="607.326 ns"></ZoomEndTime>
+      <Cursor1Time time="720.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="533"></NameColumnWidth>
+      <ValueColumnWidth column_width="243"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject type="logic" fp_name="/example_and_tb/i_a">
+      <obj_property name="ElementShortName">i_a</obj_property>
+      <obj_property name="ObjectShortName">i_a</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/example_and_tb/i_b">
+      <obj_property name="ElementShortName">i_b</obj_property>
+      <obj_property name="ObjectShortName">i_b</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/example_and_tb/o_res">
+      <obj_property name="ElementShortName">o_res</obj_property>
+      <obj_property name="ObjectShortName">o_res</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/example_and_tb/i_rst">
+      <obj_property name="ElementShortName">i_rst</obj_property>
+      <obj_property name="ObjectShortName">i_rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/example_and_tb/i_clk">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+</wave_config>

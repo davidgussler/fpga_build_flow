@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.math_real.all;
 
-library unisim;
-use unisim.vcomponents.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.all;
 
 entity example_top is
     generic (
@@ -18,10 +18,11 @@ entity example_top is
         i_sw0 : in std_logic;
         i_sw1 : in std_logic;
 
-        o_led0: out std_logic; -- xil IP and
-        o_led1: out std_logic; -- xil IP xor
-        o_led2: out std_logic; -- xil BD or
-        o_led3: out std_logic; -- my IP cntr
+        o_led0: out std_logic; -- xil BD or 
+        o_led1: out std_logic; -- xil xci IP cntr0
+        o_led2: out std_logic; -- xil xci IP cntr1
+        o_led3: out std_logic; -- vhdl and
+        o_led4: out std_logic; -- xil tcl IP adder
 
         i_rst   : in std_logic;
         i_clk   : in std_logic
@@ -82,8 +83,8 @@ architecture rtl of example_top is
     signal add_sum : std_logic_vector(3 downto 0);
 
 begin
-    o_led0 <= cnt0(27) and G_VALUE1;
-    o_led1 <= cnt1(28) or G_VALUE0;
+    o_led1 <= cnt0(27) and G_VALUE1;
+    o_led2 <= cnt1(28) or G_VALUE0;
 
     -- Block Design w/ a microblaze and uart - Imported from tcl
     u_mblaze_bd : mblaze_bd
@@ -100,7 +101,7 @@ begin
     port map (
         a_i(0) => i_sw0,
         b_i(0) => i_sw1,
-        result_o(0) => o_led2
+        result_o(0) => o_led0
     );
 
     -- Xilinx IP Counter (fabric) - Imported from xci
@@ -119,7 +120,7 @@ begin
         Q => cnt1
     );
 
-    -- VHDL module
+    -- VHDL module - No need for import
     u_and : entity work.example_and(rtl)
     port map (
         i_a => i_sw0,
@@ -138,5 +139,7 @@ begin
         CE => '1',
         S => add_sum
     );
+    o_led4 <= '1' when add_sum > X"7" else '0';
+
 
 end architecture;
