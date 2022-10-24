@@ -15,7 +15,7 @@
 #     alternateivly, run intermediate make commands to manually step thru each
 #     phase of the build process.
 #
-#     This makefile calls a multitude of tcl scripts that perform all the build 
+#     This makefile invokes some tcl scripts that perform all the build 
 #     stages of FPGA development, from source to bitstream.
 #     This build flow system uses Vivado Non-Project mode, which gives the user
 #     greater control over their environment. The only real drawback is the

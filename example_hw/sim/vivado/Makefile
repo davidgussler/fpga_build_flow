@@ -5,8 +5,7 @@
 # Author : David Gussler
 # Date   : 08-06-2022
 # Description:
-#   I'm very grateful to the author of this series of blog posts for doing 90%
-#   of the work. Please check out his original guides:
+#   Based off the work of: 
 #   https://www.itsembedded.com/dhd/vivado_sim_1/
 #
 #   This is a system for running the Xilinx simulation tools from the command 
